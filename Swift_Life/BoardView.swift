@@ -57,7 +57,7 @@ class BoardView: UIView {
     }
 
     // MARK:- GESTURE HANDLING
-    private func handleTap(sender: UITapGestureRecognizer) {
+    internal func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
             let touchLocation: CGPoint = sender.locationInView(sender.view)
             cellAtPoint(touchLocation).toggleState()
