@@ -14,7 +14,7 @@ class GameVC: UIViewController {
     // MARK:- INIT
     var timer: NSTimer!
     let boardView: BoardView!
-    let board = Board(columns: 50, rows: 50)
+    let board = Board(columns: 60, rows: 60)
 
     var ioButton    : UIButton!
     var newButton   : UIButton!
@@ -66,7 +66,7 @@ class GameVC: UIViewController {
     // Creates a randomized game board after clearing the board
     func newGame() {
         board.clear()
-        board.randomCells(2000)
+        board.randomCells(3000)
         boardView.setNeedsDisplay()
         timePassed = 0
     }
