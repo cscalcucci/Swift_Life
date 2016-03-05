@@ -90,15 +90,8 @@ class Board {
     }
 
     func oscillator() {
-        cellMatrix[4, 5]!.state = .Alive
-        cellMatrix[5, 5]!.state = .Alive
-        cellMatrix[6, 5]!.state = .Alive
-        cellMatrix[7, 5]!.state = .Alive
-        cellMatrix[8, 5]!.state = .Alive
-        cellMatrix[9, 5]!.state = .Alive
-        cellMatrix[10, 5]!.state = .Alive
-        cellMatrix[11, 5]!.state = .Alive
-        cellMatrix[12, 5]!.state = .Alive
-        cellMatrix[13, 5]!.state = .Alive
+        let osc = [(4,5),(5,5),(6,5),(7,5),(8,5),(9,5),(10,5),(11,5),(12,5),(13,5)]
+
+        osc.forEach({ (x,y) in cellMatrix[x,y]!.state = .Alive })
     }
 }

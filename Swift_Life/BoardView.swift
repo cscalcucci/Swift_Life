@@ -17,8 +17,8 @@ class BoardView: UIView {
         self.board = board
         super.init(frame: CGRectMake(0,0,0,0))
 
-        let singleFingerTap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
-        self.addGestureRecognizer(singleFingerTap)
+        let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+        self.addGestureRecognizer(tap)
     }
 
     required init?(coder aDecoder: NSCoder) {
